@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon'
+import { USERNAME } from '~/config'
+---
+
+<li>
+	<a href=`https://www.facebook.com/${USERNAME.FACEBOOK}` target="_blank">
+		<Icon name="mdi:facebook" />
+	</a>
+</li>
+
+<style>
+	a > * {
+		width: var(--size-6);
+		height: auto;
+	}
+
+	a:link,
+	a:visited {
+		color: var(--text-1);
+	}
+
+	li {
+		display: inline;
+	}
+
+	li:not(:first-child) {
+		margin-left: var(--size-2);
+	}
+</style>

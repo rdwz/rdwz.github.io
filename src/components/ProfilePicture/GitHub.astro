@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets'
+import { USERNAME } from '~/config'
+
+interface Props {
+	username: string
+}
+
+const { username = USERNAME.GITHUB } = Astro.props as Props
+
+const response = await fetch(`https://api.github.com/users/${username}`)
+const user = await response.json()
+---
+
+<Image
+	id="profile-pic"
+	src={user?.avatar_url || '/astronaut.webp'}
+	alt="GitHub Profile Picture"
+	width="480"
+	height="480"
+/>
+
+<!-- src={user?.avatar_url || '/astronaut.webp'} -->
+<!-- <p>Name: {data?.name || 'Unknown'}</p> -->
+<!-- <p>Bio: {data?.bio || 'No bio available'}</p> -->
+
+<style>
+	#profile-pic {
+		border-radius: var(--radius-round);
+		box-shadow: var(--shadow-4);
+	}
+</style>

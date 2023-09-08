@@ -1,0 +1,71 @@
+---
+import Emoji from 'astro-emoji'
+import ProfilePicture from './ProfilePicture/GitHub.astro'
+import { SITE } from '~/config'
+---
+
+<header>
+	<figure>
+		<ProfilePicture username="rdwz" />
+	</figure>
+	<h1>
+		{SITE.MOTD}
+		<Emoji symbol="👋" />
+	</h1>
+</header>
+
+<style>
+	header {
+		padding: 1rem;
+		text-align: center;
+	}
+
+	figure {
+		display: block;
+		place-items: center;
+	}
+
+	h1 {
+		padding-top: var(--size-1);
+		font-family: var(--font-sans);
+		font-size: var(--font-size-6);
+		user-select: none;
+	}
+
+	h1 > * {
+		padding-left: var(--size-2);
+
+		animation-name: wave-animation;
+		animation-duration: 2.5s;
+		animation-iteration-count: infinite;
+		transform-origin: 70% 70%;
+		display: inline-block;
+	}
+
+	@keyframes wave-animation {
+		0% {
+			transform: rotate(0deg);
+		}
+		10% {
+			transform: rotate(14deg);
+		}
+		20% {
+			transform: rotate(-8deg);
+		}
+		30% {
+			transform: rotate(14deg);
+		}
+		40% {
+			transform: rotate(-4deg);
+		}
+		50% {
+			transform: rotate(10deg);
+		}
+		60% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+</style>

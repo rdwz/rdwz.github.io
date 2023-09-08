@@ -1,0 +1,34 @@
+---
+import { SITE } from '~/config'
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{SITE.TITLE}</title>
+<meta name="title" content={SITE.TITLE} />
+<meta name="description" content={SITE.DESCRIPTION} />
+<meta name="color-scheme" content="light dark" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={SITE.TITLE} />
+<meta property="og:description" content={SITE.DESCRIPTION} />
+<meta property="og:image" content={SITE.OG_IMAGE} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content={SITE.DESCRIPTION} />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={SITE.TITLE} />
+<meta property="twitter:description" content={SITE.DESCRIPTION} />
+<meta property="twitter:image" content={SITE.TWITTER_IMAGE} />

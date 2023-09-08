@@ -1,0 +1,13 @@
+{
+  "cssvar.files": [
+    "./node_modules/open-props/open-props.min.css"
+  ],
+  "cssvar.ignore": [],
+  "cssvar.extensions": [
+    "astro"
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "./.github/workflows/deploy.yml",
+    "https://json.schemastore.org/prettierrc.json": ".prettierrc.yml"
+  }
+}

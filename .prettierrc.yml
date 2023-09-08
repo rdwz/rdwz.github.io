@@ -1,0 +1,11 @@
+useTabs: true
+singleQuote: true
+trailingComma: es5
+semi: false
+printWidth: 120
+overrides:
+  - files: '*.astro'
+    options: { 
+      parser: 'astro' 
+    }
+plugins: [prettier-plugin-astro]
