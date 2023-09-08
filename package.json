@@ -12,8 +12,8 @@
     "astro"
   ],
   "engines": {
-    "node": ">=18.16",
-    "pnpm": ">=8.6"
+    "node": ">=18.16.1",
+    "pnpm": ">=7.33.6"
   },
   "scripts": {
     "dev": "astro dev",
