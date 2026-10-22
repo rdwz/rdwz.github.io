@@ -46,7 +46,7 @@
     "astro-robots-txt": "^1.0.0",
     "astro-sitemap": "^1.0.0",
     "autoprefixer": "^10.4.16",
-    "husky": "^8.0.3",
+    "husky": "^9.0.0",
     "lint-staged": "^15.1.0",
     "more-modern-css-reset": "^1.0.0",
     "open-props": "^1.6.13",
